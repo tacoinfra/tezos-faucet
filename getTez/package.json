@@ -1,5 +1,5 @@
 {
-  "name": "@oxheadalpha/get-tez",
+  "name": "@tacoinfra/get-tez",
   "version": "1.0.7",
   "description": "Programmatic script to get Tezos from faucet",
   "main": "dist/getTez.js",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oxheadalpha/tezos-faucet.git#main"
+    "url": "git+https://github.com/tacoinfra/tezos-faucet.git#main"
   },
   "keywords": [
     "tezos",

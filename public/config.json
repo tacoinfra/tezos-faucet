@@ -3,7 +3,7 @@
       "name": "Tezos Ghostnet Faucet",
       "googleCaptchaSiteKey": "6LefC8QmAAAAAIXuoOhyI-FtALkYXZm4JK0GBYfb",
       "backendUrl": "http://localhost:3000",
-      "githubRepo": "https://github.com/oxheadalpha/tezos-faucet",
+      "githubRepo": "https://github.com/tacoinfra/tezos-faucet",
       "disableChallenges": false,
       "minTez": 1,
       "maxTez": 6000

@@ -15,7 +15,7 @@ A one-click faucet for Tezos, now enhanced with a PoW (Proof of Work) challenge 
 
 ## Overview
 
-The faucet's backend code can be located at [tezos-faucet-backend](https://github.com/oxheadalpha/tezos-faucet-backend). The backend handles the faucet's private key, CAPTCHA secret, PoW challenge creation and solution verification, and the amounts of Tez sent.
+The faucet's backend code can be located at [tezos-faucet-backend](https://github.com/tacoinfra/tezos-faucet-backend). The backend handles the faucet's private key, CAPTCHA secret, PoW challenge creation and solution verification, and the amounts of Tez sent.
 
 ### Proof of Work (PoW) Challenge
 
@@ -29,7 +29,7 @@ To mitigate potential abuse and ensure a fair distribution of Tez, users are now
 
 ## Programmatic Faucet Usage
 
-For programmatic usage of the faucet, we provide an npm package `@oxheadalpha/get-tez`. The code can be found [here](https://github.com/oxheadalpha/tezos-faucet/tree/main/getTez). Please refer to it for more details on how to use it. This script can be run from a JavaScript program or directly from a shell. It interacts with the backend to request Tez, solve the required challenges, and verify the solutions.
+For programmatic usage of the faucet, we provide an npm package `@tacoinfra/get-tez`. The code can be found [here](https://github.com/tacoinfra/tezos-faucet/tree/main/getTez). Please refer to it for more details on how to use it. This script can be run from a JavaScript program or directly from a shell. It interacts with the backend to request Tez, solve the required challenges, and verify the solutions.
 
 Please note that the programmatic faucet code does not use CAPTCHA and so more challenges can be given when using it.
 
@@ -61,7 +61,7 @@ npm i @airgap/beacon-sdk
 
 ### 2. Deploy backend
 
-See https://github.com/oxheadalpha/tezos-faucet-backend
+See https://github.com/tacoinfra/tezos-faucet-backend
 
 ### 3. Update configuration file: `config.json`
 

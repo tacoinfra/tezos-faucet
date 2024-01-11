@@ -30,7 +30,7 @@ const [time, timeLog, timeEnd] = [
 )
 
 const displayHelp = () => {
-  log(`CLI Usage: npx @oxheadalpha/get-tez [options] <address>
+  log(`CLI Usage: npx @tacoinfra/get-tez [options] <address>
 
 <address>:
   The address where Tez should be sent. This can be either a standard Tezos public key hash (e.g. tz1234abc...)
@@ -435,7 +435,7 @@ if (isMainModule) {
   const args = process.argv.slice(isMainModule ? 2 : 1)
   const parsedArgs = parseCliArgs(args)
 
-  log(`get-tez v${pkgJson.version} by Oxhead Alpha - Get Free Tez\n`)
+  log(`get-tez v${pkgJson.version} - Get Free Tez\n`)
 
   getTez(parsedArgs).then(
     (txHash) => txHash && process.stderr.write("- Transfer done!\nOperation hash: ") &&

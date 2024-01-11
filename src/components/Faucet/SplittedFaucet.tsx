@@ -168,10 +168,10 @@ export default function SplittedFaucet({
                 💡 Try the <a href="https://forum.tezosagora.org/t/programmatic-faucet/5804" target="_blank"><b>get-tez</b></a> command!
               </p>
               <p>
-                <code>npx @oxheadalpha/get-tez {inputToAddr || '<your-address>'} --amount {amount} --network {network.name.toLowerCase()}</code>
+                <code>npx @tacoinfra/get-tez {inputToAddr || '<your-address>'} --amount {amount} --network {network.name.toLowerCase()}</code>
               </p>
               <p>
-                You can also request tokens with the <a href="https://www.npmjs.com/package/@oxheadalpha/get-tez" target="_blank">get-tez NodeJS library</a> or directly through the <a href="https://github.com/oxheadalpha/tezos-faucet-backend#api-endpoints" target="_blank">API</a>.
+                You can also request tokens with the <a href="https://www.npmjs.com/package/@tacoinfra/get-tez" target="_blank">get-tez NodeJS library</a> or directly through the <a href="https://github.com/tacoinfra/tezos-faucet-backend#api-endpoints" target="_blank">API</a>.
               </p>
               <p>
                 Note: to prevent abuse, tokens are granted more slowly when using this method.

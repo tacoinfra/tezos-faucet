@@ -1,13 +1,13 @@
 # get-tez
 
-This zero dependency package provides a programmatic interface to interact with the [Tezos faucet](https://github.com/oxheadalpha/tezos-faucet-backend). It is a script that can be run from a JavaScript/Typescript program or directly from a shell. Your NodeJS version should support the [`fetch`](https://nodejs.org/dist/latest-v18.x/docs/api/globals.html#fetch) api.
+This zero dependency package provides a programmatic interface to interact with the [Tezos faucet](https://github.com/tacoinfra/tezos-faucet-backend). It is a script that can be run from a JavaScript/Typescript program or directly from a shell. Your NodeJS version should support the [`fetch`](https://nodejs.org/dist/latest-v18.x/docs/api/globals.html#fetch) api.
 
 ## Installation
 
 You can install the package from npm:
 
 ```bash
-npm install @oxheadalpha/get-tez
+npm install @tacoinfra/get-tez
 ```
 
 ## Usage
@@ -17,11 +17,11 @@ npm install @oxheadalpha/get-tez
 After installing the package, you can import it in your Node.js JavaScript or TypeScript project:
 
 ```javascript
-const getTez = require("@oxheadalpha/get-tez")
+const getTez = require("@tacoinfra/get-tez")
 
 // OR
 
-import getTez from "@oxheadalpha/get-tez"
+import getTez from "@tacoinfra/get-tez"
 ```
 
 You can then use the `getTez` function to interact with the Tezos faucet. The function takes an object as an argument, with the following properties:
@@ -70,7 +70,7 @@ const txHash = await getTez({
 You can also run `get-tez` directly from the command line with `npx`:
 
 ```bash
-npx @oxheadalpha/get-tez tz1... --amount 10 --network ghostnet
+npx @tacoinfra/get-tez tz1... --amount 10 --network ghostnet
 ```
 
 Run the script with the `--help` flag for more information.

@@ -21,22 +21,7 @@ function Footer() {
             className="d-flex align-items-center justify-content-md-end justify-content-center"
           >
             <a
-              href="https://www.oxheadalpha.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2 text-muted d-flex align-items-center"
-              style={{ textDecoration: "none" }}
-            >
-              <img
-                src="/oxheadalpha.svg"
-                alt="Oxhead Alpha Logo"
-                height="24"
-              />
-              <span className="logotext_oxhead me-1">Oxhead</span>
-              <span className="logotext_alpha">Alpha</span>
-            </a>
-            <a
-              href="https://github.com/oxheadalpha"
+              href="https://github.com/tacoinfra"
               target="_blank"
               rel="noopener noreferrer"
               className="mx-2 text-muted"
@@ -44,15 +29,7 @@ function Footer() {
               <Github size={24} />
             </a>
             <a
-              href="https://medium.com/the-aleph"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2 text-muted"
-            >
-              <Medium size={24} />
-            </a>
-            <a
-              href="https://twitter.com/oxheadalpha"
+              href="https://www.twitter.com/tacoinfra"
               target="_blank"
               rel="noopener noreferrer"
               className="mx-2 text-muted"

@@ -8,13 +8,13 @@ function Header() {
       <Container fluid>
         <Nav>
           <Navbar.Brand>
-            <a href="https://www.oxheadalpha.com" target="_blank">
+            <a href="https://www.tezos.com" target="_blank">
               <img
-                src="/oxheadalpha.svg"
+                src="/tezos.svg"
                 className="d-inline-block align-top"
                 width="30"
                 height="30"
-                alt="Oxhead Alpha Logo"
+                alt="Tezos Logo"
               />
             </a>{" "}
             {Config.application.name}
