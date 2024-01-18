@@ -42,7 +42,7 @@ Options:
   -h, --help                Display help information.
   -a, --amount     <value>  The amount of Tez to request.
   -n, --network    <value>  Set the faucet's network name. Must match a
-                            network name with a faucet listed at https://teztnets.xyz.
+                            network name with a faucet listed at https://teztnets.com.
                             Ignored if --faucet-url is set.
   -f, --faucet-url <value>  Set the custom faucet URL. Ignores --network.
   -d, --client-dir <value>  Custom client directory path to look up an address alias.
@@ -89,7 +89,7 @@ type GetTezArgs = {
   /** Custom client directory path to look up address alias. */
   clientDir?: string
   /** Set the faucet's network name. Must match a network name with a faucet
-   * listed at https://teztnets.xyz. Ignored if `faucetUrl` is set. */
+   * listed at https://teztnets.com. Ignored if `faucetUrl` is set. */
   network?: string
   /** Set the custom faucet URL. Ignores `network`. */
   faucetUrl?: string
@@ -194,7 +194,7 @@ const validateArgs = async (args: GetTezArgs): Promise<ValidatedArgs> => {
   }
 
   if (!args.faucetUrl) {
-    const teztnetsUrl = "https://teztnets.xyz/teztnets.json"
+    const teztnetsUrl = "https://teztnets.com/teztnets.json"
     const response = await fetch(teztnetsUrl, {
       signal: AbortSignal.timeout(10_000),
     })
