@@ -42,7 +42,7 @@ Options:
   -h, --help                Display help information.
   -a, --amount     <value>  The amount of Tez to request.
   -n, --network    <value>  Set the faucet's network name. Must match a
-                            network name with a faucet listed at https://teztnets.com.
+                            network name with a faucet listed at https://teztnets.com
                             Ignored if --faucet-url is set.
   -f, --faucet-url <value>  Set the custom faucet URL. Ignores --network.
   -d, --client-dir <value>  Custom client directory path to look up an address alias.

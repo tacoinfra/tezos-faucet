@@ -1,6 +1,6 @@
 {
   "name": "@tacoinfra/get-tez",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Programmatic script to get Tezos from faucet",
   "main": "dist/getTez.js",
   "bin": {
@@ -37,7 +37,7 @@
   "author": "Aryeh Harris",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.6.0",
-    "typescript": "^5.2.2"
+    "@types/node": "^20.11.5",
+    "typescript": "^5.3.3"
   }
 }
