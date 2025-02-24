@@ -48,12 +48,14 @@ Currently supported networks include:
 
 - Mainnet
 - Ghostnet
-- Mondaynet
+- Weeklynet
 - Dailynet
 - Nairobinet
 - Oxfordnet
+- Parisnet
+- Quebecnet
 
-To add a new network, first check that `@airgap/beacon-sdk` handles it ([check their config on the latest release](https://github.com/airgap-it/beacon-sdk/blob/v4.0.6/packages/beacon-types/src/types/beacon/NetworkType.ts)), then update:
+To add a new network, first check that `@airgap/beacon-sdk` handles it ([check their config on the latest release](https://github.com/airgap-it/beacon-sdk/blob/master/packages/beacon-types/src/types/beacon/NetworkType.ts)), then update:
 
 ```
 npm i @airgap/beacon-sdk
@@ -103,5 +105,5 @@ docker build . -t tezos-faucet
 Run Docker image:
 
 ```
-docker run -p 8080:8080 tezos-faucet
+docker run -p 8080:8080 --rm tezos-faucet
 ```
