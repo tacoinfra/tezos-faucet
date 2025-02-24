@@ -1,4 +1,4 @@
-import { Github, Twitter, Medium } from "react-bootstrap-icons"
+import { Github, TwitterX, Medium } from "react-bootstrap-icons"
 import { Container, Row, Col } from "react-bootstrap"
 
 const { APP_DESCRIPTION, APP_VERSION } = import.meta.env
@@ -29,12 +29,12 @@ function Footer() {
               <Github size={24} />
             </a>
             <a
-              href="https://www.twitter.com/tacoinfra"
+              href="https://x.com/tacoinfra"
               target="_blank"
               rel="noopener noreferrer"
               className="mx-2 text-muted"
             >
-              <Twitter size={24} />
+              <TwitterX size={24} />
             </a>
           </Col>
         </Row>
