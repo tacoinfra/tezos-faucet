@@ -26,6 +26,14 @@ function SplittedWallet({
     user.setUserBalance(balance.toNumber())
   }
 
+  const wallet = new BeaconWallet({ name: Config.application.name })
+
+  // active account event
+  wallet.client.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, async (account) => {
+    await setup(account.address)
+  });
+
+
   const connectWallet = async (): Promise<void> => {
     if (!network.networkType) {
       console.error("No network defined.")
@@ -33,47 +41,39 @@ function SplittedWallet({
     }
 
     try {
-      await testnetContext.wallet.requestPermissions({
-        network: {
-          type: network.networkType,
-          rpcUrl: network.rpcUrl,
-        },
-      })
-      // gets user's address
-      const userAddress = await testnetContext.wallet.getPKH()
-      await setup(userAddress)
-    } catch (error) {
-      console.log(error)
+      const permissions = await wallet.client.requestPermissions();
+    } catch (err: any) {
+      console.log("Could not connect to wallet:\n", err.message);
     }
+
   }
 
   useEffect(() => {
     ;(async () => {
       // creates a wallet instance
-      const wallet = new BeaconWallet({
-        name: Config.application.name,
-        preferredNetwork: network.networkType,
-        disableDefaultEvents: false,
-      })
       testnetContext.Tezos.setWalletProvider(wallet)
       testnetContext.setWallet(wallet)
-      // checks if wallet was connected before
+
       const activeAccount = await wallet.client.getActiveAccount()
       if (activeAccount) {
-        const userAddress = await wallet.getPKH()
+        const userAddress = activeAccount.address
         await setup(userAddress)
       }
+
     })()
   }, [])
 
   const disconnectWallet = async (): Promise<void> => {
+
     user.setUserAddress("")
     user.setUserBalance(0)
-    const tezosTK = new TezosToolkit(network.rpcUrl)
-    testnetContext.setTezos(tezosTK)
-    if (testnetContext.wallet) {
-      await testnetContext.wallet.clearActiveAccount()
+
+    try {
+      await wallet.client.disconnect();
+    } catch (err: any) {
+      console.log("Could not disconnect from wallet:\n", err.message);
     }
+
     window.location.reload()
   }
 
