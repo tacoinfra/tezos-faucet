@@ -74,21 +74,6 @@ export default function SplittedFaucet({
 
       <Card.Body>
         <Row className="gy-2">
-          <Col md={6} className="faucet-part">
-            <Card.Text className="faucet-part-title">
-              Fund your web wallet
-            </Card.Text>
-            <FaucetToWalletRequest
-              network={network}
-              user={user}
-              status={statusContext}
-              amount={amount}
-              setAmount={setAmount}
-              inputToAddr={inputToAddr}
-              setInputToAddr={setInputToAddr}
-            />
-          </Col>
-          <Col md={6} className="faucet-part">
             <Card.Text className="faucet-part-title">
               Fund any address
             </Card.Text>
@@ -100,7 +85,6 @@ export default function SplittedFaucet({
               inputToAddr={inputToAddr}
               setInputToAddr={setInputToAddr}
             />
-          </Col>
         </Row>
 
         {showPowProgress && (
