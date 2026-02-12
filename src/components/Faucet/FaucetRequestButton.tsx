@@ -231,10 +231,10 @@ export default function FaucetRequestButton({
         // Let the progress bar briefly show 100% before it goes away
         await new Promise((res) => setTimeout(res, 800))
 
-        const viewerUrl = `${network.viewer}/${data.txHash}`
+        const viewerUrl = network.viewer && `${network.viewer}/${data.txHash}`
 
         stopLoadingSuccess(
-          `Your ꜩ is on the way! <a target="_blank" href="${viewerUrl}" class="alert-link">Check it.</a>`
+          `Your ꜩ is on the way!${ viewerUrl ? ` <a target="_blank" href="${viewerUrl}" class="alert-link">Check it.</a>` : '' }`
         )
       } else {
         stopLoadingError("Error verifying solution")
