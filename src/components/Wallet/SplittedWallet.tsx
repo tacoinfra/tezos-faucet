@@ -6,6 +6,7 @@ import { useEffect } from "react"
 import { Button, Card, Row, Col } from "react-bootstrap"
 import UserInfo from "../Faucet/UserInfo"
 import { Network, TestnetContext, UserContext } from "../../lib/Types"
+import { NetworkType } from '@tezos-x/octez.connect-types';
 
 function SplittedWallet({
   user,
@@ -26,7 +27,13 @@ function SplittedWallet({
     user.setUserBalance(balance.toNumber())
   }
 
-  const wallet = new BeaconWallet({ name: Config.application.name })
+  const wallet = new BeaconWallet({
+    name: Config.application.name,
+    network: {
+      type: NetworkType[ (network?.networkType || network?.name || 'CUSTOM' ).toUpperCase() as keyof typeof NetworkType ],
+      rpcUrl: network.rpcUrl,
+    },
+  })
 
   // active account event
   wallet.client.subscribeToEvent(BeaconEvent.ACTIVE_ACCOUNT_SET, async (account) => {
