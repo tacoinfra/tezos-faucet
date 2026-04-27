@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react"
-import { TezosToolkit } from "@tezos-x/octez.js"
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet"
-import { NetworkType } from "@tezos-x/octez.connect-sdk"
+import { TezosToolkit } from "@taquito/taquito"
+import { BeaconWallet } from "@taquito/beacon-wallet"
+import { NetworkType } from "@airgap/beacon-sdk"
 
 type ApplicationConfig = {
   name: string

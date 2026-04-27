@@ -1,12 +1,11 @@
-import { BeaconEvent, defaultEventCallbacks } from "@tezos-x/octez.connect-sdk"
-import { BeaconWallet } from "@tezos-x/octez.js-dapp-wallet"
-import { TezosToolkit } from "@tezos-x/octez.js"
+// import { TezosToolkit } from "@taquito/taquito"
+import { BeaconWallet, BeaconEvent } from "@taquito/beacon-wallet"
 import Config from "../../Config"
 import { useEffect } from "react"
 import { Button, Card, Row, Col } from "react-bootstrap"
 import UserInfo from "../Faucet/UserInfo"
 import { Network, TestnetContext, UserContext } from "../../lib/Types"
-import { NetworkType } from '@tezos-x/octez.connect-types';
+import { NetworkType } from "@ecadlabs/beacon-types"
 
 function SplittedWallet({
   user,
@@ -30,7 +29,7 @@ function SplittedWallet({
   const wallet = new BeaconWallet({
     name: Config.application.name,
     network: {
-      type: NetworkType[ (network?.networkType || network?.name || 'CUSTOM' ).toUpperCase() as keyof typeof NetworkType ],
+      type: NetworkType[ (network?.networkType || network?.name ).toUpperCase() as keyof typeof NetworkType ] || NetworkType.CUSTOM,
       rpcUrl: network.rpcUrl,
     },
   })
