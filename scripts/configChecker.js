@@ -138,7 +138,7 @@ if (network) { // Happy path: config verified with success
 console.log(chalk.bold.red(`Unknown network.name "${Config.network.name}" specified in config.json.`));
 
 const airgapUpdate = suggestEventualPackageUpdate("@tezos-x/octez.connect-sdk");
-const taquitoUpdate = suggestEventualPackageUpdate("@tezos-x/octez.js");
+const taquitoUpdate = suggestEventualPackageUpdate("@taquito/taquito");
 
 if (!airgapUpdate && !taquitoUpdate) {
   err(`There seems to be no updates for the Tezos network support NPM packages.\n\nPlease double check your entry, valid values are: ${networkKeys.map(x => `"${NetworkType[x].toLowerCase()}"` ).join(", ")}`);
