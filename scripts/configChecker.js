@@ -1,7 +1,7 @@
 const path = require("path")
 const { execSync } = require("child_process")
 const chalk = require("chalk")
-const { NetworkType } = require("@airgap/beacon-types")
+const { NetworkType } = require("@tezos-x/octez.connect-types")
 
 console.log(chalk.cyan("Validating config.json file...\n"))
 
@@ -137,7 +137,7 @@ if (network) { // Happy path: config verified with success
 // Check for newer versions?
 console.log(chalk.bold.red(`Unknown network.name "${Config.network.name}" specified in config.json.`));
 
-const airgapUpdate = suggestEventualPackageUpdate("@airgap/beacon-sdk");
+const airgapUpdate = suggestEventualPackageUpdate("@tezos-x/octez.connect-sdk");
 const taquitoUpdate = suggestEventualPackageUpdate("@taquito/taquito");
 
 if (!airgapUpdate && !taquitoUpdate) {

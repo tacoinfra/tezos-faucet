@@ -1,11 +1,11 @@
 {
   "name": "tezos-faucet",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "description": "Tezos Faucet Frontend",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@airgap/beacon-sdk": "4.8.1",
+    "@tezos-x/octez.connect-sdk": "4.8.4",
     "@taquito/beacon-wallet": "24.3.0",
     "@taquito/signer": "24.3.0",
     "@taquito/taquito": "24.3.0",

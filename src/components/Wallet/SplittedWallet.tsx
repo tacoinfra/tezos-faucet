@@ -5,7 +5,7 @@ import { useEffect } from "react"
 import { Button, Card, Row, Col } from "react-bootstrap"
 import UserInfo from "../Faucet/UserInfo"
 import { Network, TestnetContext, UserContext } from "../../lib/Types"
-import { NetworkType } from "@ecadlabs/beacon-types"
+import { NetworkType } from "@tezos-x/octez.connect-sdk"
 
 function SplittedWallet({
   user,

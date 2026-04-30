@@ -50,15 +50,15 @@ Currently supported networks include:
 - Ghostnet
 - Weeklynet
 - Dailynet
-- Nairobinet
-- Oxfordnet
-- Parisnet
-- Quebecnet
+- Seoulnet
+- Shadownet
+- Tallinnnet
+- Ushuaianet
 
-To add a new network, first check that `@airgap/beacon-sdk` handles it ([check their config on the latest release](https://github.com/airgap-it/beacon-sdk/blob/master/packages/beacon-types/src/types/beacon/NetworkType.ts)), then update:
+To add a new network, first check that `@tezos-x/octez.connect-sdk` handles it ([check their config on the latest release](https://github.com/trilitech/octez.connect/blob/master/packages/octez.connect-types/src/types/beacon/NetworkType.ts)), then update:
 
 ```
-npm i @airgap/beacon-sdk
+npm i @tezos-x/octez.connect-sdk
 ```
 
 ### 2. Deploy backend
@@ -84,7 +84,7 @@ See https://github.com/tacoinfra/tezos-faucet-backend
 
 **Network configuration:**
 
-- `name`: network name. Must match one of [@airgap/beacon-sdk NetworkType](https://github.com/airgap-it/beacon-sdk/blob/master/packages/beacon-types/src/types/beacon/NetworkType.ts) value (case insensitive). Also used to be displayed.
+- `name`: network name. Must match one of [@tezos-x/octez.connect-sdk NetworkType](https://github.com/trilitech/octez.connect/blob/master/packages/octez.connect-types/src/types/beacon/NetworkType.ts) value (case insensitive). Also used to be displayed.
 
 - `rpcUrl`: Tezos network RPC endpoint to be used by faucet
 
