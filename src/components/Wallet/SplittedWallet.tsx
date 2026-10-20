@@ -26,10 +26,12 @@ function SplittedWallet({
     user.setUserBalance(balance.toNumber())
   }
 
+  const walletNetworkType = (NetworkType[(network?.networkType || network?.name)?.toUpperCase() as keyof typeof NetworkType] ?? NetworkType.CUSTOM) as any
+
   const wallet = new BeaconWallet({
     name: Config.application.name,
     network: {
-      type: NetworkType[ (network?.networkType || network?.name ).toUpperCase() as keyof typeof NetworkType ] || NetworkType.CUSTOM,
+      type: walletNetworkType,
       rpcUrl: network.rpcUrl,
     },
   })

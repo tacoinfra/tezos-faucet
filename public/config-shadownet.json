@@ -1,0 +1,17 @@
+{
+    "application": {
+      "name": "Tezos Shadownet Faucet",
+      "googleCaptchaSiteKey": "6LefC8QmAAAAAIXuoOhyI-FtALkYXZm4JK0GBYfb",
+      "backendUrl": "http://localhost:3000",
+      "githubRepo": "https://github.com/tacoinfra/tezos-faucet",
+      "disableChallenges": true,
+      "minTez": 1,
+      "maxTez": 6000
+    },
+    "network": {
+      "name": "Shadownet",
+      "rpcUrl": "https://rpc.shadownet.teztnets.com",
+      "faucetAddress": "tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC",
+      "viewer": "https://shadownet.tzkt.io"
+    }
+}
